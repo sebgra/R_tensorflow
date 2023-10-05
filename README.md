@@ -9,16 +9,12 @@ mamba create -n tensorflow_r python==3.9
 mamba activate tensorflow_r 
 sudo apt-get install python3-venv
 mamba install -c conda-forge tensorflow
-
 which python
 ```
 
 ```R
-# install.packages("remotes")
 remotes::install_github("rstudio/tensorflow")
 install.packages("keras")
-
-# reticulate::install_python()
 Sys.setenv(TENSORFLOW_PYTHON="/usr/bin/python") #result of which python
 
 library(tensorflow)
